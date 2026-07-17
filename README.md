@@ -35,11 +35,8 @@ Translations/
 
 每个语言目录下的文件结构与游戏内的文本条目一一对应。每个文件包含若干条键值对：(LLF格式)
 
-KEY_001: 对应的翻译文本
+<img width="594" height="354" alt="image" src="https://github.com/user-attachments/assets/629d7c35-0df7-4497-9e29-5016502e7fc1" />
 
-KEY_002: 对应的翻译文本
-
-  此键名的下一行翻译文本
 
 对于.csf文件，使用csf编辑器进行编辑即可。
 
