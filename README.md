@@ -79,7 +79,7 @@ text
 
 ```mermaid
 flowchart LR
-    A[机翻初版] --> B[社区校对]（该步骤可省略）
+    A[机翻初版] --> B[社区校对]
     B --> C[提交 PR / Issue]
     C --> D[维护者审核]
     D --> E[合并更新]
