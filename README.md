@@ -21,13 +21,13 @@ Translations/
 
 - `zh-hant/` — Classical Chinese version (using Traditional Chinese characters)
 
-## 🌐 语言状态
+## 🌐 Language Status
 
-| 语言 | 代码 | 目录 | 状态 |
-|------|------|------|------|
-| English | `en` | `/en` | 🟡 Machine-translated initial version, pending proofreading |
-| 简体中文 | `zh-Hans` | `/zh-Hans` | 🟢 Source language|
-| 文言文 | `zh-hant` | `/zh-hant` | 🟡 Machine-translated initial version, pending proofreading |
+| Language | Code      | Directory  | Status |
+|------    |------     |------      |------|
+| English  | `en`      | `/en`      | 🟡 Machine-translated initial version, pending proofreading |
+| 简体中文  | `zh-Hans` | `/zh-Hans` | 🟢 Source language|
+| 文言文    | `zh-hant` | `/zh-hant` | 🟡 Machine-translated initial version, pending proofreading |
 
 > 🟢 Completed  🟡 In progress 🔴 Not started
 
