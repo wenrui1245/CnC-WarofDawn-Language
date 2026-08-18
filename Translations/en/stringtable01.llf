@@ -88,7 +88,6 @@ TXT_TOGGLE_POWER_DESC: Turn on/off "Toggle Power Mode" option.
 TXT_SELECT_CAPTURED: Select Captured Units
 TXT_SELECT_CAPTURED_DESC: Select all temporarily mind-controlled units.
 MSG:SelectCaptured: Temporarily mind-controlled units selected
-MSG:NothingSelected: No temporarily mind-controlled units selected
 TXT_EX_SW_BAR_VISIBLE: Superweapon Sidebar: Show
 TXT_EX_SW_BAR_INVISIBLE: Superweapon Sidebar: Hide
 TXT_EX_SW_SWITCH: Superweapon Sidebar
@@ -245,7 +244,7 @@ Description:EPGDP: 【Side】Erebus - Chaos Legion
   【Weapons】
     [Mutagen Laser]
     -Damage Type: Laser-like
-    -Anti-armor, anti-building, anti-infantry
+    -anti-building, anti-infantry
     -Infantry killed by this turn into special [Brutes]
     -Cannot target air
   【Special Attributes】
@@ -311,6 +310,7 @@ Description:HUTK: 【Side】Soviet Union - Eastern United Front
   -Can fire on the move
   -Can enter Tank Bunkers
   -Deploy to switch between Form 1 and Form 2
+  -Automatically switch forms based on enemy types
 Name:YUNRG: Moonwalker (Chaos Legion)
 Name:YUNRV: Moonwalker (Ares Order)
 Name:YUNRM: Moonwalker (Mind Mandate)
@@ -359,8 +359,7 @@ Description:LTNKE: 【Side】Erebus - Mind Mandate
     -Use after deployment
     -Raises defense, lowers speed
     -Cannot fire while field is active
-    -Reflects 10% damage back to enemies attacking it and those in 3x3 area
-    -Deals continuous damage and slows enemies in area
+    -Slows nearby enemies and pulls them in
     -Ineffective against [Scourger Tank]
   【Special Attributes】
   -Can fire on the move
@@ -647,8 +646,7 @@ Description:XUEJI: 【Side】Allied Nations - Pacific Island Chain
     [Cryo Beam]
     -Damage Type: ICE
     -Anti-infantry
-    -Gradually freezes target, reducing mobility, attack and defense
-    -Frozen objects have drastically reduced defense and lose mobility
+    -Gradually freezes target, reducing mobility
     -Anti-missile
   【Special Attributes】
   -Amphibious
@@ -846,7 +844,6 @@ Description:BLOCK: 【Side】Allied Nations - Europa Joint Council
   -Can enter Tank Bunkers
   -Auto-repairs after combat
   -Limited to 1
-  -Triggers invincibility when HP first drops below 40%
   -Immune to mind control and nerve gas
   -Immune to all crushing
   -Boosts nearby vehicles' defense by 25%
@@ -1073,7 +1070,7 @@ Description:ATHENA: 【Side】Allied Nations - United States of America
   【Weapons】 
     ["Scepter" Orbital Weapon Platform]
     -Damage Type: Laser
-    -Anti-building, anti-infantry, anti-armor
+    -Anti-building, anti-infantry
     -Has a slight wind-up before firing
     -Deals continuous damage to target area after impact
     -Against [Target Lock] enemies, wind-up time is greatly reduced
@@ -1102,8 +1099,7 @@ Description:KAZE: 【Side】Allied Nations - Pacific Island Chain
     [Hail Bomb Device]
     -Damage Type: ICE + AP
     -Anti-infantry, anti-armor, anti-building
-    -Freezes targets, reducing mobility, attack and defense
-    -Frozen objects have drastically reduced defense and lose mobility
+    -Freezes targets slowly, reducing mobility
     -Launches itself toward target upon attack, causing an explosion
   【Special Attributes】
   -Invisible on enemy minimap
@@ -1408,8 +1404,8 @@ Description:HTTNK: 【Side】Allied Nations - Pacific Island Chain
     [Freeze Missile]
     -Damage Type: ICE
     -Anti-infantry, anti-armor
-    -Freezes target, reducing mobility, attack and defense
-    -Frozen objects have drastically reduced defense and lose mobility
+    -Freezes target slowly, reducing mobility
+    -Attack leaves LN2 cloud that damages over time
     [Ice Shield]
     -Absorbs a certain amount of damage
     -Automatically recovers after 1 minute
@@ -1471,7 +1467,7 @@ Description:LIMECH: 【Side】Allied Nations - Pacific Island Chain
     -Damage Type: HE + Sonic
     -Anti-building, anti-armor
     -Requires lock-on time before firing
-    -Speed reduced by 50% when attacking
+    -Can not move when attacking
   【Special Attributes】
   -Can crush infantry
   -Can enter Tank Bunkers
@@ -1715,12 +1711,15 @@ Description:LDBB: 【Side】Allied Nations - Pacific Island Chain
     [Frost Cryo Cannon]
     -Damage Type: ICE
     -Anti-infantry
+    -Attack leaves LN2 cloud that damages over time
     -Area suppression
     -Gradually freezes target, reducing mobility, attack and defense
     -Frozen objects have drastically reduced defense and lose mobility
     [Cryo AP Cannon]
-    -Damage Type: AP
+    -Damage Type: AP + ICE
     -Anti-building
+    -Freezes target slowly, reducing mobility
+    -Attack leaves LN2 cloud that damages over time
   【Special Attributes】
   -Chrono-moves
   -Cannot be crushed by normal vehicles
@@ -2026,8 +2025,8 @@ Description:IRONKEPT: 【Side】Soviet Union - Eastern United Front
   【Special Attributes】
   -Immune to radiation
   -Immune to mind control
-  -Can receive Iron Curtain
   -Immune to Iron Curtain damage
+  -Can be protected by Iron Curtain
   -Immune to poison gas
   -Auto-repairs
   -Affected by EMP
@@ -2111,17 +2110,12 @@ Description:YDSAH: 【Side】Erebus - Chaos Legion
   【Unit Type】Attack Helicopter
   【Armor】Medium Armor
   【Weapons】 
-    [Plague HE Shell]
-    -Damage Type: HE
-    -Cannot target air
-    -Infantry killed mutate into special [Brutes]
-    -Anti-armor, anti-building, anti-infantry
-    [Plague AA Shell]
-    -Damage Type: HC
-    -Anti-air only
-  【Special Attributes】
+    [Gatling Cannon]
+    -Damage Type: AC
+    -Anti-infantry, anti-light armor, anti-air
+    -Fire rate increases over time
+   -Can fire on the move
    -Auto-repairs after combat
-   -10% chance to dodge damage when hit, cooldown 5 frames
 Description:DISK: 【Side】Erebus - Ares Order
   【Unit Type】Heavy Flying Unit
   【Armor】Heavy Armor
@@ -2527,6 +2521,8 @@ Description:TIANY: 【Side】Soviet Union - Eastern United Front
   -Detects cloaked or submerged units (range: 10)
   -Training speed unaffected by multiple barracks
   -Immune to mind control
+  -Immune to Iron Curtain damage
+  -Can be protected by Iron Curtain
 Description:TIANY2: 【Side】Soviet Union - Eastern United Front
   【Unit Type】Hero Unit
   【Armor】Flak Jacket
@@ -2972,6 +2968,7 @@ Description:HTNK: 【Side】Soviet Union - Soviet Russia
   -Can fire on the move
   -Can enter Tank Bunkers
   -Increased multiple factory bonus
+  -Increased industrial plant bonus
 Description:HTK: 【Side】Soviet Union
   【Unit Type】AA Vehicle
   【Armor】Light Armor
@@ -3221,8 +3218,6 @@ Description:CNTNK: 【Side】Soviet Union - Eastern United Front
     -Anti-armor, anti-building
     -Leaves ionizing radiation dealing continuous damage
     -After attack, attack increases but speed decreases
-    [Iron Curtain Mk1 Armor]
-    -Chance to ignore incoming damage
   【Special Attributes】
   -Can crush infantry
   -Can fire on the move
@@ -3440,8 +3435,7 @@ Description:ZEP: 【Side】Soviet Union
     -Anti-infantry, anti-building, anti-armor
     -Bonus damage against defense structures
   【Special Attributes】
-  -Auto-repairs
-  -When HP below 60%, recovers 8% HP every 7 seconds
+  -Auto-repairs after combat rapidly
 Description:MIG: 【Side】Soviet Union - Soviet Russia
   【Unit Type】Ground Support Aircraft
   【Armor】Light Armor
@@ -3719,13 +3713,15 @@ Description:ALPHA: 【Side】Soviet Union
   【Unit Type】Suppression Infantry
   【Armor】Flak Jacket
   【Weapons】 
-    [Suppression Grenade]
+    [EMP Grenade]
     -Damage Type: HC
-    -Anti-infantry, anti-armor, anti-building
-    -Reduces enemy attack and speed
+    -anti-armor, anti-building
+    -Disables targeted vehicles and buildings
     [AKCУ74 Assault Rifle]
     -Damage Type: SA
-    -Anti-infantry
+    -Anti-infantry, Anti-light armor
+    -Lowers enemy attack and speed
+    -Damages all enemies in an area
   【Special Attributes】
   -Amphibious
 Description:OFFICER: 【Side】Soviet Union
@@ -4326,14 +4322,14 @@ Description:SCTK: 【Side】Erebus - Mind Mandate
   -Can be boosted by [Psionic Surge] superweapon
 Name:JIEZE2: Condemnation Ballista
 Description:JIEZE2: 【Side】Erebus - Mind Mandate
-  【Unit Type】T3 Siege Vehicle
+  【Unit Type】Long-range Light Bombardment
   【Armor】Light Armor
   【Weapons】 
     [Psionic Arrow]
     -Damage Type: Psionic
     -Anti-building, anti-light armor, anti-infantry
-    -Deals penetrating damage to enemies in a line
-    -Penetration damage reduces by 30% per hit
+    -Fear: causes hit enemy units to become [Fearful]
+    -[Fear]: reduces fire rate and attack
   【Special Attributes】
   -Can enter Tank Bunkers
   -Driver cannot be killed
@@ -4357,7 +4353,6 @@ Description:LRFSV: 【Side】Soviet Union - Eastern United Front
     [Electronic Countermeasure System]
     -Deploys full spectrum ECM, losing mobility
     -Reduces movement and attack speed of all armored units in area by 60% (friend and foe)
-    -Gives friendly units in area 15% chance to dodge damage (non-stackable)
     -Only in Form 2
   【Special Attributes】
   -Immune to all crushing
@@ -4396,7 +4391,6 @@ Description:LRFSVUP: 【Side】Soviet Union - Eastern United Front
     -Deploys full spectrum ECM, losing mobility
     -Reduces movement and attack speed of all enemy armored units in area by 60%
     -Boosts friendly [Qilin Assault Tanks] in area by 50% attack speed
-    -Gives friendly units in area 15% chance to dodge damage (non-stackable)
     -Only in Form 2
   【Special Attributes】
   -Immune to all crushing
@@ -4510,7 +4504,7 @@ Description:NROCK: 【Side】Erebus - Chaos Legion
   【Weapons】 
     [Mutagen Laser]
     -Damage Type: Laser-like
-    -Anti-armor, anti-building, anti-infantry
+    -anti-building, anti-infantry
     -Infantry killed turn into special [Brutes]
   【Special Attributes】
   -Immune to normal crushing
@@ -4568,7 +4562,7 @@ Description:PSISPY: 【Side】Erebus - Mind Mandate
     -Anti-infantry, anti-armor
     -Can target air
     [Grudge]
-    -On death, spawns a Ghost
+    -On allies death, spawns Ghosts
     -Ghost is invulnerable
     -Ghost attacks to permanently weaken speed, attack and defense
   【Special Attributes】
@@ -4832,6 +4826,7 @@ Description:HTNKMP: 【Side】Soviet Union - Soviet Russia
   -Can fire on the move
   -Can enter Tank Bunkers
   -Increased multiple factory bonus
+  -Increased industrial plant bonus
 Name:BMP3: Zubr Armored Vehicle
 Description:BMP3: 【Side】Soviet Union - Soviet Russia
   【Unit Type】Support Vehicle
@@ -4853,6 +4848,7 @@ Description:BMP3: 【Side】Soviet Union - Soviet Russia
   -Can fire on the move
   -Can enter Tank Bunkers
   -Increased multiple factory bonus
+  -Increased industrial plant bonus
   -Detects cloaked units (range: 6)
 Name:GAAIRC: Allied Air Command
 Name:PLAGUE: Plague Helicopter
@@ -5009,6 +5005,8 @@ Description:WOLF: 【Side】Erebus
     -Damage Type: AP
     -Anti-infantry, anti-armor, anti-building
     -Carries 3 rounds, can deal high burst damage
+    -Fear: causes hit enemy units to become [Fearful]
+    -[Fear]: reduces fire rate and attack
     [Psionic Self-destruct Shell]
     -Damage Type: AP
     -Anti-infantry, anti-armor, anti-building
@@ -5123,6 +5121,17 @@ RENWU:wdsov02s36: Sofia: "......"
 RENWU:wdsov02s37: Sofia: "Air force units military exercising nearby have arrived."
 RENWU:wdsov02s38: Sofia: "More attack helicopters have arrived."
 RENWU:wdsov02s39: Warning - More enemies have arrived.
+RENWU:wdsov02s40: 索菲亚：“战场不是儿戏，等支援到来后，请跟我去一趟莫斯科。”
+RENWU:wdsov02s41: 米哈伊尔：“明...明白！”
+RENWU:wdsov02s42: 索菲亚：“呼叫乌拉尔军团，这里是基辅防线，我是副官索菲亚。”
+RENWU:wdsov02s43: 乌拉尔军团通讯兵：“收到，这里是乌拉尔军团，请讲。”
+RENWU:wdsov02s44: 索菲亚：“前线战况很不乐观，援军还没赶到吗？”
+RENWU:wdsov02s45: 乌拉尔军团通讯兵：“正在全速行军，我们已经驶入基辅军区！”
+RENWU:wdsov02s46: 索菲亚：“我还要负责报告战况，所以长话短说。能分给我们多少兵力？”
+RENWU:wdsov02s47: 乌拉尔军团通讯兵：“...一个...装甲师，还有一个步兵团。”
+RENWU:wdsov02s48: 索菲亚：“什么？！虽然敖德萨防线的情况更糟糕，但是这也太少了吧。”
+RENWU:wdsov02s49: 乌拉尔军团通讯兵：“来支援你们的同志都是精英中的精英。罗曼诺夫总理说，他相信将军同志能指挥这些精兵击垮盟军的！”
+RENWU:wdsov02s50: 索菲亚：“既然是总理下达的指示...将军同志，我也相信您可以做到的！”
 RENWU:wdsov02stime: Time until Ural Group arrives:
 RENWU:wdsov02swin: 您出色的指挥使得我们成功抵御了盟军对基辅的进攻。但是，敌人突破了另一位将军在敖德萨设立的防线......
 Name:WDSOV02: Mission: Defense of Kyiv - Location: Ukraine - Kyiv - Dnieper River bank
@@ -5388,3 +5397,11 @@ Name:LBD: Lightning Shock Trooper
 Name:YuriPrime: Yuri Prime
 Name:LUNR: Lunar Infantry
 Name:HARVSP: Immediately produce a Miner at the Ore Refinery
+LoadMsg:WDCN02: 附加任务：不屈 - 地点：？？？
+Name:CloverLegion: 四叶草联合军团
+Name:Silver: 银十字阵地
+Name:Messiah: 弥赛亚侧翼
+Name:Vanguard: 游骑士先锋
+CMND:UICATEGORY_PHOBOSEXT: PhobosExt
+CMND:UINAME_AUTOLOAD: Auto Passengers Load
+CMND:UIDESCR_AUTOLOAD: Recruit nearby units to board selected empty transports.
