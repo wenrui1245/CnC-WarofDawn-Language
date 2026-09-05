@@ -4,7 +4,7 @@ Description:Ripper: 【Side】Erebus - Mind Mandate
   【Weapons】 
     [Ripper Penetration Shell]
     -Damage Type: AP
-    -Anti-armor
+    -Anti-armor, anti-infantry
     -Deals penetrating damage to enemies in a line
     -Penetration damage reduces by 30% per hit
   【Special Attributes】
@@ -1050,7 +1050,7 @@ Description:LONGBOW: 【Side】Allied Nations - United States of America
   【Special Attributes】
   -Can fire on the move
   -Can enter Tank Bunkers
-  -Detects cloaked units (range: 12)
+  -Detects cloaked units (range: 8)
 Description:IRTK: 【Side】Soviet Union
   【Unit Type】T3 Support Vehicle
   【Armor】Heavy Armor
@@ -1291,7 +1291,7 @@ Description:HOVER: 【Side】Allied Nations - Pacific Island Chain
   -Can be produced from both War Factory and Shipyard
   -Detects cloaked units (range: 8)
 Description:WFA: 【Side】Allied Nations - Pacific Island Chain
-  【Unit Type】T2 Long-range Anti-cluster Unit
+  【Unit Type】T2 Anti-infantry Unit
   【Armor】Light Armor
   【Weapons】 
     [U-shaped Sonic Cannon]
@@ -2114,6 +2114,7 @@ Description:YDSAH: 【Side】Erebus - Chaos Legion
     -Damage Type: AC
     -Anti-infantry, anti-light armor, anti-air
     -Fire rate increases over time
+  【Special Attributes】
    -Can fire on the move
    -Auto-repairs after combat
 Description:DISK: 【Side】Erebus - Ares Order
@@ -3370,6 +3371,7 @@ Description:HIND: 【Side】Soviet Union
   【Special Attributes】
   -Invisible on enemy minimap
   -Has 5 passenger slots
+  -Can lift vehicles
 Description:SiegeChopper: 【Side】Soviet Union - Atlas Confederation
   【Unit Type】Siege Helicopter
   【Armor】Medium Armor
@@ -4185,12 +4187,12 @@ Description:CHRTNK: 【Side】Allied Nations
   -Chrono-moves
 Name:SUPERNOVA: Supernova Laser Cannon
 Description:SUPERNOVA: 【Side】Allied Nations - United States of America
-  【Unit Type】T2 Long-range Strike Cannon
+  【Unit Type】Harassment Guerilla Unit
   【Armor】Light Armor
   【Weapons】 
     [Mars Laser Cannon]
     -Damage Type: Laser
-    -Anti-light armor, anti-infantry, anti-defenses
+    -Anti-light armor, anti-infantry
     -Deals more damage the longer it fires
     -Against [Target Lock] enemies, damage ramp-up is faster
     [Energy Absorbing Armor]
@@ -4236,6 +4238,7 @@ Description:Tip26: "Without favorable timing, terrain, and unity, victory brings
 Description:Tip27: "Avoid the strong and attack the weak." — Sun Tzu's Art of War, Xu Shi Pian
 Description:Tip28: Did you know? Command & Conquer: War of Dawn was first publicly released on June 12, 2022~
 Description:Tip29: "If soldiers come, we block; if water comes, we dam." — from the play "Da Battle of Pitong"
+Description:Tip30: “Suffering both torments and teaches one to grow.” — Russian Proverb
 Description:JJPC: 【Side】Erebus - Ares Order
   【Unit Type】T1 Anti-infantry Unit
   【Armor】Light Armor
@@ -4320,20 +4323,19 @@ Description:SCTK: 【Side】Erebus - Mind Mandate
   【Special Attributes】
   -Detects cloaked units (range: 6)
   -Can be boosted by [Psionic Surge] superweapon
-Name:JIEZE2: Condemnation Ballista
-Description:JIEZE2: 【Side】Erebus - Mind Mandate
+Name:JIEZE2: Wraith Assault Cannon
+Description:JIEZE2: 【Side】Erebus - Chaos Legion
   【Unit Type】Long-range Light Bombardment
   【Armor】Light Armor
   【Weapons】 
     [Psionic Arrow]
     -Damage Type: Psionic
-    -Anti-building, anti-light armor, anti-infantry
-    -Fear: causes hit enemy units to become [Fearful]
-    -[Fear]: reduces fire rate and attack
+    -Anti-infantry, anti-building, anti-light armor
+    -Attack enemies consistently
   【Special Attributes】
+  -Can fire on the move
   -Can enter Tank Bunkers
   -Driver cannot be killed
-  -Can be boosted by [Psionic Surge] superweapon
 Name:LRFSV: Xiyue Fire Support Vehicle
 Description:LRFSV: 【Side】Soviet Union - Eastern United Front
   【Unit Type】T3 Anti-armor Unit
@@ -4510,7 +4512,23 @@ Description:NROCK: 【Side】Erebus - Chaos Legion
   -Immune to normal crushing
   -Auto-repairs
 Name:NGHT: Shadow Guard
-Description:NGHT: 【Side】Erebus
+Description:NGHT: 【Side】Erebus - Chaos Legion
+  【Unit Type】Support Infantry
+  【Armor】Flak Jacket
+  【Weapons】 
+    [Walther PPK-2]
+    -Damage Type: SA
+    -Anti-infantry
+    [Biochemical Mutant Landmine]
+    -Deploy a [Biochemical Mutant Landmine]
+    -Heal surrounding allies' infantries
+    -Carry out suicide attacks on passing units
+    -Infantry killed turn into special [Brutes]
+    -Automatically detonates after a period of time
+  【Special Attributes】
+  -Detects cloaked units (range: 4)
+Name:REZNOV: Night Assassin
+Description:REZNOV: 【Side】Erebus
   【Unit Type】Guerilla Harassment Infantry
   【Armor】Unarmored
   【Weapons】 
@@ -4552,6 +4570,30 @@ Description:DESOLATOR: 【Side】Erebus - Ares Order
   【Special Attributes】
   -Immune to normal crushing
   -Heals in poison gas
+Name:CIVY: Ghost Manipulator
+Description:CIVY: 【Side】Erebus - APsionic Mandate
+  【Unit Type】Main Battle Infantry
+  【Armor】Helmet
+  【Weapons】 
+    [Puppet Citizen]
+    -Summon 5 [Puppet Citizen] to carry out suicide attacks
+    -Citizens are automatically replenished when eliminated
+    -Citizens will follow [Ghost Manipulator] to move or hunt
+    -Damage Type: HE
+    -Anti-infantry, anti-building
+  【Special Attributes】
+  -Immune to normal crushing
+Name:ZTROOP: Hunt Terror Commando
+Description:ZTROOP: 【Side】Erebus - Chaos Legion
+  【Unit Type】Main Battle Infantry
+  【Armor】Helmet
+  【Weapons】 
+    [Gatling Cannon]
+    -Damage Type: AC
+    -Anti-infantry, anti-light armor, anti-air
+    -Fire rate increases over time
+  【Special Attributes】
+  -Immune to normal crushing
 Name:PSISPY: Soulstealer
 Description:PSISPY: 【Side】Erebus - Mind Mandate
   【Unit Type】Main Battle Infantry
@@ -4566,6 +4608,7 @@ Description:PSISPY: 【Side】Erebus - Mind Mandate
     -Ghost is invulnerable
     -Ghost attacks to permanently weaken speed, attack and defense
   【Special Attributes】
+  -Immune to mind control
   -Detects cloaked units (range: 6)
   -Can be boosted by [Psionic Surge] superweapon
 Name:GHST: Ghost
@@ -4583,11 +4626,12 @@ Description:YRTNK: 【Side】Erebus - Chaos Legion
   【Unit Type】T3 Main Battle Tank
   【Armor】Heavy Armor
   【Weapons】 
-    [Starshatter Railgun]
+    [Charge Railgun]
     -Damage Type: AP
     -Anti-armor
     -Attack increases after firing
-    [Charge Railgun]
+    -After a while, use [Starshatter Railgun], and return to the initial state
+    [Starshatter Railgun]
     -Damage Type: AP
     -Anti-armor
   【Special Attributes】
@@ -4700,22 +4744,24 @@ Description:Casilio: 【Side】Erebus - Chaos Legion
   -Detects cloaked or submerged units (range: 9)
   -Training speed unaffected by multiple barracks
   -Immune to mind control and nerve gas
-Name:OBI: Wraith Assault Cannon
-Description:OBI: 【Side】Erebus - Chaos Legion
-  【Unit Type】T2 Long-range Anti-cluster Unit
+Name:OBI: Condemnation Ballista
+Description:OBI: 【Side】Erebus - Psionic Mandate
+  【Unit Type】T3 Siege Vehicle
   【Armor】Medium Armor
   【Weapons】 
-    [Wraith Assault Cannon]
+    [Psionic Arrow]
     -Damage Type: Psionic
     -Anti-unit, anti-building
     -Deals continuous damage to an area
-    -Applies [Wraith] to enemies:
+    -Applies [Bear] to enemies:
       Speed reduced, causes area percentage damage when destroyed
   【Special Attributes】
   -Amphibious
   -Immune to radiation
+  -Driver cannot be killed
   -Detects cloaked units (range: 6)
   -Can enter Tank Bunkers
+  -Can be boosted by [Psionic Surge] superweapon
 Name:BEAGE: Sky Eagle Fighter
 Description:BEAGE: 【Side】Allied Nations - Pacific Island Chain
   【Unit Type】Heavy Fighter
@@ -5121,19 +5167,19 @@ RENWU:wdsov02s36: Sofia: "......"
 RENWU:wdsov02s37: Sofia: "Air force units military exercising nearby have arrived."
 RENWU:wdsov02s38: Sofia: "More attack helicopters have arrived."
 RENWU:wdsov02s39: Warning - More enemies have arrived.
-RENWU:wdsov02s40: 索菲亚：“战场不是儿戏，等支援到来后，请跟我去一趟莫斯科。”
-RENWU:wdsov02s41: 米哈伊尔：“明...明白！”
-RENWU:wdsov02s42: 索菲亚：“呼叫乌拉尔军团，这里是基辅防线，我是副官索菲亚。”
-RENWU:wdsov02s43: 乌拉尔军团通讯兵：“收到，这里是乌拉尔军团，请讲。”
-RENWU:wdsov02s44: 索菲亚：“前线战况很不乐观，援军还没赶到吗？”
-RENWU:wdsov02s45: 乌拉尔军团通讯兵：“正在全速行军，我们已经驶入基辅军区！”
-RENWU:wdsov02s46: 索菲亚：“我还要负责报告战况，所以长话短说。能分给我们多少兵力？”
-RENWU:wdsov02s47: 乌拉尔军团通讯兵：“...一个...装甲师，还有一个步兵团。”
-RENWU:wdsov02s48: 索菲亚：“什么？！虽然敖德萨防线的情况更糟糕，但是这也太少了吧。”
-RENWU:wdsov02s49: 乌拉尔军团通讯兵：“来支援你们的同志都是精英中的精英。罗曼诺夫总理说，他相信将军同志能指挥这些精兵击垮盟军的！”
-RENWU:wdsov02s50: 索菲亚：“既然是总理下达的指示...将军同志，我也相信您可以做到的！”
+RENWU:wdsov02s40: Sofia: "The battlefield is no child's play. After the reinforcements arrive, please come with me to Moscow."
+RENWU:wdsov02s41: Mikhail: "Un... understood!"
+RENWU:wdsov02s42: Sofia: "Calling Ural Group, this is Kyiv Defense Line, Deputy Sofia."
+RENWU:wdsov02s43: Ural Group Radio Operator: "Received, this is Ural Group, go ahead."
+RENWU:wdsov02s44: Sofia: "The frontline situation is not optimistic. Haven't reinforcements arrived yet?"
+RENWU:wdsov02s45: Ural Group Radio Operator: "We are marching at full speed; we've already entered Kyiv Military District!"
+RENWU:wdsov02s46: Sofia: "I still need to report the battle situation, so I'll keep it short. How many troops can you spare for us?"
+RENWU:wdsov02s47: Ural Group Radio Operator: "...One armored division, and one infantry regiment."
+RENWU:wdsov02s48: Sofia: "What?! Although the Odessa defense line is in worse shape, this is still too few."
+RENWU:wdsov02s49: Ural Group Radio Operator: "The comrades coming to support you are the elite of the elite. Premier Romanov said he believes the General can command these elite troops to crush the Allies!"
+RENWU:wdsov02s50: Sofia: "Since it's the Premier's order... General, I also believe you can do it!"
 RENWU:wdsov02stime: Time until Ural Group arrives:
-RENWU:wdsov02swin: 您出色的指挥使得我们成功抵御了盟军对基辅的进攻。但是，敌人突破了另一位将军在敖德萨设立的防线......
+RENWU:wdsov02swin: Your excellent command allowed us to successfully repel the Allied attack on Kyiv. However, the enemy broke through another general's defense line at Odessa......
 Name:WDSOV02: Mission: Defense of Kyiv - Location: Ukraine - Kyiv - Dnieper River bank
 LoadMsg:WDSOV02: Mission: Defense of Kyiv - Location: Ukraine - Kyiv - Dnieper River bank
 LoadBrief:WDSOV02: >Objective 1: Hold out until Ural Group arrives.
@@ -5142,8 +5188,10 @@ Brief:WDSOV02: The Allies have officially declared war; Europa Joint Council lau
   They are clearly prepared; we had to hastily set up a temporary defense. Losing Kyiv would be disastrous for the battle situation. We must hold it!
 TXT_ASSIGN_RALLY_POINT: Set Primary Rally Point
 TXT_ASSIGN_2ND_RALLY_POINT: Set Secondary Rally Point
-brief:WDSOV01: 
-Name:WDSOV01: 
+brief:WDSOV01: The Allies are secretly assembling troops outside Warsaw; we need to investigate their intentions; if we can take out the enemy along the way, even better.
+  >Objective 1: Infiltrate target buildings
+LoadBrief:WDSOV01: >Objective 1: Infiltrate target building.
+Name:WDSOV01: Nightfall Plan - Location: Poland - Warsaw - Vistula River bank
 brief:ALL008: 
 LoadBrief:wdcn01: >Objective 1: Destroy Soviet radar.
   >Objective 2: Eliminate all Soviet forces.
@@ -5214,7 +5262,7 @@ Description:QUEEN: 【Side】Erebus
     -Damage Type: HE
     -Anti-infantry, anti-armor, anti-building
     -Causes large area damage
-    -Applies [Wraith] to enemies:
+    -Applies [Bear] to enemies:
       Speed reduced, causes area percentage damage when destroyed
   【Special Attributes】
   -Obtained by infiltrating enemy [Allied Battle Lab]
@@ -5397,11 +5445,115 @@ Name:LBD: Lightning Shock Trooper
 Name:YuriPrime: Yuri Prime
 Name:LUNR: Lunar Infantry
 Name:HARVSP: Immediately produce a Miner at the Ore Refinery
-LoadMsg:WDCN02: 附加任务：不屈 - 地点：？？？
-Name:CloverLegion: 四叶草联合军团
-Name:Silver: 银十字阵地
-Name:Messiah: 弥赛亚侧翼
-Name:Vanguard: 游骑士先锋
+LoadMsg:WDCN02: Bonus Mission: Unyielding - Location: ???
+Name:CloverLegion: Four-leaf Clover Legion
+Name:Silver: Silver Cross Position
+Name:Messiah: Messiah Flank
+Name:Vanguard: Light Knight Vanguard
 CMND:UICATEGORY_PHOBOSEXT: PhobosExt
 CMND:UINAME_AUTOLOAD: Auto Passengers Load
 CMND:UIDESCR_AUTOLOAD: Recruit nearby units to board selected empty transports.
+renwu:wdsov01easy: Nightfall Plan - Location: Poland - Warsaw - Vistula River bank
+  Difficulty: Easy
+renwu:wdsov01medium: Nightfall Plan - Location: Poland - Warsaw - Vistula River bank
+  Difficulty: Normal
+renwu:wdsov01hard: Nightfall Plan - Location: Poland - Warsaw - Vistula River bank
+  Difficulty: Hard
+LoadMsg:WDSOV01: Nightfall Plan - Location: Poland - Warsaw - Vistula River bank
+renwu:wdsov01s1: Sofia: "Comrade General, welcome back."
+renwu:wdsov01s2: Sofia: "Sorry to interrupt your vacation."
+renwu:wdsov01s3: Sofia: "Allied forces have secretly built a military base in the deep forests outside Warsaw."
+renwu:wdsov01s4: Sofia: "Combined with intel from the intelligence department, high command suspects the Allies are planning another large-scale war."
+renwu:wdsov01s5: Sofia: "We must find out what the Allies are up to, so we don't fight unprepared."
+renwu:wdsov01s6: Sofia: "The infiltration squad planted by intelligence went silent a while ago, which can only mean one thing."
+renwu:wdsov01s7: Sofia: "Their identities must have been exposed, and the Allies have certainly increased their defenses against infiltrators."
+renwu:wdsov01s8: Sofia: "Nevertheless, high command still believes that full infiltration of this base is necessary."
+renwu:wdsov01s9: Sofia: "After careful consideration, high command unanimously agrees that only you have the capability to accomplish this glorious and arduous mission."
+renwu:wdsov01s10: Sofia: "Enough small talk. Let me brief you on the operation overview and precise objectives."
+renwu:wdsov01s11: Sofia: "According to intel from the infiltrators' last contact, there is a spy satellite here."
+renwu:wdsov01s12: Sofia: "Based on our experience from the First Psychic War, there must be vital intelligence stored inside."
+renwu:wdsov01s13: Sofia: "Please have our spy infiltrate this building to obtain valuable intel."
+renwu:wdsov01s14: Sofia: "The road ahead is dangerous; watch out for the Allies' well-trained attack dogs, SEALs, and sturdy fortifications."
+renwu:wdsov01s15: Sofia: "A Hind transport helicopter is on the way, carrying a Torka vehicle full of elite troops."
+renwu:wdsov01s16: Sofia: "I've marked valuable and high-risk targets for you; proceed with caution."
+renwu:wdsov01s17: Sofia: "Also, do not destroy Allied production buildings, as that would expose our squad."
+renwu:wdsov01s18: Sofia: "Briefing complete. I'll now transfer command to you."
+renwu:wdsov01s19: Sofia: "Detected a Prism Tower, extremely dangerous! Try ordering the spy to disguise as enemy infantry, then throw an EMP grenade to disable it."
+renwu:wdsov01s20: Sofia: "The enemy may have deployed Mirage Tanks in the forest; try ordering a Desolator to deploy, forcing them to reveal themselves."
+renwu:wdsov01scaidan: Sofia: "This is not the time for a bathroom break, comrades."
+renwu:wdsov01s21: Sofia: "This base is heavily guarded; don't try to break through from the front. Take a detour."
+renwu:wdsov01s22: Sofia: "Detected a Grand Cannon, extremely dangerous! Have our spy infiltrate the Allied power plant to cut off the base's power."
+renwu:wdsov01s23: Sofia: "Allow me to introduce our advanced Lightning Trooper."
+renwu:wdsov01s24: Sofia: "His range is longer than the Tesla Trooper's, allowing him to attack outside the range of machine gun bunkers."
+renwu:wdsov01s25: Sofia: "The only drawback is that his attack cannot split into additional arcs."
+renwu:wdsov01s26: Sofia: "By the way, attack dogs cannot target units with helmet armor like Lightning Troopers, Tesla Troopers, or Desolators, so feel free to let such units lead the charge."
+renwu:wdsov01s27: Hint: Select a unit and move the mouse over its icon in the lower-left corner of the interface to view detailed information.
+renwu:wdsov01s28: Sofia: "Detected Prism Tower, extremely dangerous!"
+renwu:wdsov01s29: Sofia: "Our spy can not only disguise as enemy infantry but also carries EMP grenades that can disable such power-hungry defenses for a while. While it's disabled, command Lightning Troopers to destroy it!"
+renwu:wdsov01s30: Sofia: "According to our intel, any tree here could be a Mirage Tank."
+renwu:wdsov01s31: Sofia: "Although we can't tell which tree is fake, we can force them to reveal themselves by using the radiation field from a deployed Desolator!"
+renwu:wdsov01s32: Hint: Even if soldiers are low on health, don't worry—campfires can slowly heal nearby infantry; also, standing near a campfire automatically saves the game.
+renwu:wdsov01s33: Sofia: "There's a shortcut here; your eyesight is truly impressive, Comrade General!"
+renwu:wdsov01s34: Sofia: "Detected Grand Cannon, extremely dangerous!"
+renwu:wdsov01s35: Sofia: "Although this beast is powerful, we can have our spy infiltrate the power plant to silence it."
+renwu:wdsov01s36: Sofia: "There's a base blocking our path, with many enemies guarding it. Breaking through from the front isn't a good idea. Go left and take a detour."
+renwu:wdsov01s37: Sofia: "Wh... what?! You just charged straight in! Well, now we're in trouble."
+renwu:wdsov01s38: Sofia: "This is a squad that went missing earlier; the squad leader has transferred command to you."
+renwu:wdsov01s39: Sofia: "Found two Prism Tanks, extremely dangerous! Huh? Wait, why aren't they attacking us?"
+renwu:wdsov01s40: Sofia: "Since they won't attack us, why not 'borrow' these two Prism Tanks?"
+renwu:wdsov01s41: Hint: The Vanguard Commissar can hijack vehicles. Prism Tanks have two forms, switchable by deploying.
+renwu:wdsov01s42: Sofia: "The bridge here is broken; we need an Engineer to repair it."
+renwu:wdsov01s43: Sofia: "We don't have satellite coverage of this area; please infiltrate this communication center so I can locate an Engineer."
+renwu:wdsov01s44: Sofia: "Enemy Engineer location locked. Approach this area and hijack the Engineer."
+renwu:wdsov01s45: Allied Engineer: "Who's there?! Uh... don't... don't kill me, I'll go with you..."
+renwu:wdsov01s46: Sofia: "We can't open this gate, but the switch to control it is inside this satellite communication center."
+renwu:wdsov01s47: Sofia: "There's no way down from this high ground; fortunately, our prior intelligence work pays off."
+renwu:wdsov01s48: Sofia: "There are two amphibious transports here. Through the river, we can circle around below."
+renwu:wdsov01s49: Sofia: "But be careful—there are many destroyers and dolphins on the river!"
+renwu:wdsov01s50: Sofia: "Gate access granted. Now our squad can pass right through."
+renwu:wdsov01s51: Sofia: "Why are there old Apocalypse Tanks here? Looks like the Allies are dismantling them for research."
+renwu:AutoSave: Auto Save
+renwu:AutoSaveTips: Mission progress saved √
+renwu:wdsov01sfail1: Sofia: "The Allies have detected us; this infiltration mission has failed."
+renwu:wdsov01swin: Sofia: "The information here is very valuable. Well done, Comrade General!"
+renwu:wdsov01swin1: Sofia: "...Kyiv, the Allies are playing a clever game."
+renwu:wdsov01schoro: Sofia: "What a pleasant surprise. Destroying this Chrono Sphere will surely hinder the Allied offensive greatly."
+renwu:wdsov01schoro1: Hint: In the next mission, enemy armored unit attack intensity will be significantly reduced.
+renwu:missiononeaccomplished: Objective 1 complete.
+renwu:missiontwoaccomplished: Objective 2 complete.
+renwu:missionthereaccomplished: Objective 3 complete.
+
+Theme:Frost Moon Battle: Selenic Ascension - HOYO-MiX 
+Theme:Columbinas Poem: Columbina's Poem
+Name:HJP: Thunderbolt Rocket Artillery
+Description:HJP: 【Side】Hidden Unit
+  【Unit Type】Ultra-long-range Bombardment
+  【Armor】Light Armor
+  【Weapons】 
+    [PHL-191 Rocket Launcher]
+    -Damage Type: HE
+    -Anti-light armor, anti-building
+    -Fires multiple salvos
+    -Can only fire when deployed
+Name:TSUNAMI: Tsunami Battleship
+Description:TSUNAMI: 【Side】Erebus - Chaos Legion
+  【Unit Type】Heavy Surface Combatant
+  【Armor】Heavy Armor
+  【Weapons】 
+    [Wave Assault Gun]
+    -Damage Type: HE
+    -Anti-armor, anti-building, anti-infantry
+    -Deals penetrating damage to enemies in a line
+    [Tsunami Oscillator]
+    -Damage Type: HE
+    -Anti-armor, anti-building, anti-infantry
+    -Deals massive damage to all nearby targets
+    -Self-disables for a while after use
+    -Use after deployment
+  【Special Attributes】
+  -Immune to mind control
+  -Cannot be hijacked
+  -Driver cannot be killed
+  -Can fire on the move
+  -Auto-repairs
+  -Immune to gravity effects
