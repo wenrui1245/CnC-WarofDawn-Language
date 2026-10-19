@@ -554,9 +554,9 @@ Name:IMPWAR: Imperial Warrior
 Name:ARCHERM: Archer Maiden
 Name:DISC: Grenadier
 Name:NMRO: Nanorobot
-THEME:Dawn: Dawn
-THEME:DawnBattleSong: Shatter the Darkness
-THEME:PreludeOfDawn: Prelude of Dawn
+THEME:Dawn: Dawn  - Yunyou Sihai
+THEME:DawnBattleSong: Shatter the Darkness - Yunyou Sihai
+THEME:PreludeOfDawn: Prelude of Dawn - Yunyou Sihai
 Name:Nanorobots: Nanorobots
 Name:DawnBombing: Dawn Bombing
 Name:IceShield: Ice Barrier
@@ -602,7 +602,7 @@ Description:ITNK: 【Side】Allied Nations - Pacific Island Chain
   【Unit Type】T1 Basic Tank
   【Armor】Light Armor
   【Weapons】 
-    [95mm Main Gun]
+    [105mm Main Gun]
     -Damage Type: AP
     -Anti-armor, anti-building
     [Ice Shield]
@@ -626,7 +626,7 @@ Description:AMHMV: 【Side】Hidden Unit
   -Passengers can fire out
 Description:SENTRY: 【Side】Allied Nations - Europa Joint Council
   【Unit Type】T1 Infantry Fighting Vehicle
-  【Armor】Light Armor
+  【Armor】Medium Armor
   【Weapons】 
     [MG5 HMG]
     -Damage Type: AC
@@ -643,11 +643,14 @@ Description:XUEJI: 【Side】Allied Nations - Pacific Island Chain
   【Unit Type】T1 Infantry Fighting Vehicle
   【Armor】Light Armor
   【Weapons】 
-    [Cryo Beam]
+    [“雪女-3”型Cryo Beam]
     -Damage Type: ICE
     -Anti-infantry
     -Gradually freezes target, reducing mobility
     -Anti-missile
+    [寒冰护盾]
+    -抵挡一次伤害
+    -1分钟后自动恢复
   【Special Attributes】
   -Amphibious
   -Can fire on the move
@@ -765,16 +768,15 @@ Description:PALADIN: 【Side】Allied Nations - United States of America
   -Can fire on the move
   -Auto-repairs after combat
   -Periodically emits repair aura that heals nearby units
-  -Reduces attack of nearby units by 15%
-Name:DTRU: Soviet Heavy Crane
-NAME:EXPNB: Soviet Repair Crane
+Name:DTRU: Heavy Crane
+NAME:EXPNB: Repair Crane
 Name:TesShield: Tesla Shield
 Name:TesShield2: Charging
 Name:TesAttackSpecial: Ball Lightning
 Name:VIESpecial: Guerrilla Squad Support
 Name:CATEDawn: Tunnel Entrance
 Name:NAGAURD: Detection Tower
-Name:NATURR: Soviet Fortress Gun
+Name:NATURR: Fortress Gun
 Name:HELI: Sickle Attack Helicopter
 Name:SiegeChopper: Sledge Attack Helicopter
 Name:MIGE: MiG Fighter
@@ -870,7 +872,7 @@ Description:FV: 【Side】Allied Nations - Europa Joint Council
   【Unit Type】T1 Infantry Fighting Vehicle
   【Armor】Light Armor
   【Weapons】
-    [Hover Missile]
+    [Fog Missile]
     -Damage Type: HC
     -Can target air
     -Anti-light armor, anti-infantry
@@ -1107,7 +1109,7 @@ Description:CRYOCOPTER: 【Side】Allied Nations - Pacific Island Chain
   【Unit Type】T2 Support Helicopter
   【Armor】Medium Armor
   【Weapons】 
-    [Cryo Beam]
+    [“霜华-7”型Cryo Beam]
     -Damage Type: ICE
     -Anti-infantry
     -Gradually freezes target, reducing mobility, attack and defense
@@ -1136,7 +1138,6 @@ Description:BEAGLE: 【Side】Allied Nations - Pacific Island Chain
   【Special Attributes】
   -Invisible on enemy minimap
   -Auto-repairs after combat
-  -Gains speed boost when returning
 Description:ORCA: 【Side】Allied Nations - Europa Joint Council
   【Unit Type】Ground Attack Aircraft
   【Armor】Light Armor
@@ -1150,14 +1151,20 @@ Description:ORCA: 【Side】Allied Nations - Europa Joint Council
   -Auto-repairs after combat
   -Gains speed boost when returning
 Description:SUPALLFLYER: 【Side】Allied Nations - Europa Joint Council
-  【Unit Type】T3 Heavy Hovercraft
+  【Unit Type】空中炮台
   【Armor】Heavy Armor
   【Weapons】 
-    [Zeus Railgun]
-    -Damage Type: Laser
+    [列克星敦火箭]
+    -Damage Type: AP
     -Anti-armor, anti-infantry
     -Can target air
-    -Requires lock-on time before firing
+    [防守模式]
+    -强A地面，在地面生成警戒圈
+    -对警戒圈内的敌方单位使用[宙斯光棱炮]
+    [宙斯光棱炮]
+    -伤害类型：光棱
+    -反装甲，反步兵
+    -只能对警戒圈范围内的单位使用
   【Special Attributes】
   -Auto-repairs after combat
 Description:MINERFLY: 【Side】Allied Nations - United States of America
@@ -1211,7 +1218,7 @@ Description:SHAD: 【Side】Allied Nations
   -Has 5 passenger slots
 Description:B25L: 【Side】Allied Nations - Europa Joint Council
   【Unit Type】T3 Bomber
-  【Armor】Light Armor
+  【Armor】Heavy Armor
   【Weapons】 
     [Neutron M3 Missile]
     -Damage Type: Chrono
@@ -1222,7 +1229,7 @@ Description:B25L: 【Side】Allied Nations - Europa Joint Council
   -Auto-repairs after combat
 Description:B2: 【Side】Allied Nations - Pacific Island Chain
   【Unit Type】T3 Bomber
-  【Armor】Light Armor
+  【Armor】Medium Armor
   【Weapons】 
     [Jethro 500lb Bomb]
     -Damage Type: HE
@@ -1298,6 +1305,7 @@ Description:WFA: 【Side】Allied Nations - Pacific Island Chain
     -Damage Type: HE + Sonic
     -Anti-infantry, anti-building
     -Deals penetrating damage to enemies in a line
+    -Splashes out multiple sonic waves to cause area damage
   【Special Attributes】
   -Amphibious
   -Can fire on the move
@@ -1354,7 +1362,7 @@ Description:MECH: 【Side】Allied Nations - Europa Joint Council
   【Unit Type】T2 Guerilla Unit
   【Armor】Medium Armor
   【Weapons】 
-    [Meteor Laser Cannon]
+    [Meteor Prism Cannon]
     -Damage Type: Prism
     -Anti-armor, anti-infantry
     [Chrono Teleport Device]
@@ -1379,7 +1387,7 @@ Description:TNKD: 【Side】Allied Nations - Europa Joint Council
   -Can crush infantry
   -Only obtained via [Heavy Armored Division] protocol
 Description:MGTK: 【Side】Allied Nations - Europa Joint Council
-  【Unit Type】T3 Main Battle Tank
+  【Unit Type】T3 Advanced Anti-unit Vehicle
   【Armor】Medium Armor
   【Weapons】 
     [Thermal Cannon]
@@ -1474,14 +1482,13 @@ Description:LIMECH: 【Side】Allied Nations - Pacific Island Chain
   -Driver cannot be killed
   -Auto-repairs
 Description:LARS2D: 【Side】Allied Nations - Europa Joint Council
-  【Unit Type】T3 Siege Vehicle
+  【Unit Type】T3 火力支援平台
   【Armor】Light Armor
   【Weapons】 
     [Spartan Missile]
     -Damage Type: HE
     -Anti-armor, anti-building
     -Can only fire when deployed
-    -Has slight wind-up before firing
   【Special Attributes】
   -Can crush infantry
   -Driver cannot be killed
@@ -1491,6 +1498,7 @@ Description:AMCV: 【Side】Allied Nations
   【Weapons】 
     Can deploy into Allied Construction Yard
   【Special Attributes】
+  -Can crush vehicles and infantry
   -Amphibious
   -Cannot be hijacked
   -Immune to all crushing
@@ -1849,6 +1857,7 @@ Description:ASAPC: 【Side】Allied Nations
   -Can enter Tank Bunkers
   -Immune to mind control
   -Immune to radiation
+  -Has 2 passenger slots
   -Can fire on the move
 Description:BBDRED: 【Side】Allied Nations - Pacific Island Chain
   【Unit Type】Heavy Surface Combatant
@@ -1864,8 +1873,7 @@ Description:BBDRED: 【Side】Allied Nations - Pacific Island Chain
     -Deploy to switch
     [30mm CIWS]
     -Damage Type: AC
-    -Can target air
-    -Anti-infantry, anti-armor
+    -Can only target air
   【Special Attributes】
   -Immune to mind control
   -Cannot be hijacked
@@ -1917,7 +1925,7 @@ Description:AEGISCRUISER: 【Side】Allied Nations - United States of America
   【Unit Type】Heavy Surface Combatant
   【Armor】Heavy Armor
   【Weapons】 
-    [Burke CIWS Missile]
+    [Harpoon Anti-Ship Missile]
     -Damage Type: HC
     -Anti-infantry, anti-armor, anti-building
     -Can target air
@@ -1930,7 +1938,7 @@ Description:AEGISCRUISER: 【Side】Allied Nations - United States of America
     -Anti-armor
     -Carries 1 aircraft
     -Returns to cruiser when ammo spent or about to be destroyed
-    -Can target submerged units, cannot attack land
+    -Can target submerged units
   【Special Attributes】
   -Immune to mind control
   -Cannot be hijacked
@@ -1971,7 +1979,7 @@ Description:DLPH: 【Side】Allied Nations
     -Can release [Giant Squid]'s grapple
     -Can target submerged units, cannot attack land
   【Special Attributes】
-  -Cloaked
+  -Under water unit
   -Immune to mind control
   -Cannot be hijacked
   -Driver cannot be killed
@@ -1989,7 +1997,7 @@ Description:HAILSTORM: 【Side】Allied Nations
     -Units inside gradually lose speed and firepower
     -Does not affect [Sperm Whale] itself
   【Special Attributes】
-  -Cloaked
+  -Under water unit
   -Cannot be hijacked
   -Driver cannot be killed
   -Emits repair field when damaged to repair nearby vehicles
@@ -1998,12 +2006,14 @@ Description:MINISUB: 【Side】Allied Nations - Europa Joint Council
   【Unit Type】Land-attack Guerilla Unit
   【Armor】Heavy Armor
   【Weapons】 
+    [中子炮]
+    -伤害类型：超时空
     [Glimmer Prism Missile]
     -Damage Type: Prism
     -Anti-infantry, anti-armor, anti-building
-    -Can target submerged units
+    -Can only attack land
   【Special Attributes】
-  -Cloaked
+  -Under water unit
   -Immune to mind control
   -Cannot be hijacked
   -Driver cannot be killed
@@ -3365,7 +3375,7 @@ Description:HIND: 【Side】Soviet Union
   【Unit Type】T1 Transport Aircraft
   【Armor】Light Armor
   【Weapons】 
-    [M2 Browning HMG]
+    [12.7mm NSV HMG]
     -Damage Type: AC
     -Anti-infantry, anti-light armor
   【Special Attributes】
@@ -4717,7 +4727,7 @@ Description:Rainear: 【Side】Erebus - Ares Order
   -Training speed unaffected by multiple barracks
   -Immune to mind control, nerve gas, and virus
   -Healed by virus
-Description:VIRUS: 【Side】Erebus
+Description:VIRUS: 【Side】Erebus - Ares Order
   【Unit Type】Single-target Anti-infantry Infantry
   【Armor】Unarmored
   【Weapons】 
@@ -4771,6 +4781,7 @@ Description:BEAGE: 【Side】Allied Nations - Pacific Island Chain
     -Damage Type: ICE
     -Anti-armor, anti-infantry
     -Can target air
+    -降低敌方单位速度
   【Special Attributes】
   -Invisible on enemy minimap
   -Can fire on the move
@@ -5492,7 +5503,7 @@ renwu:wdsov01s28: Sofia: "Detected Prism Tower, extremely dangerous!"
 renwu:wdsov01s29: Sofia: "Our spy can not only disguise as enemy infantry but also carries EMP grenades that can disable such power-hungry defenses for a while. While it's disabled, command Lightning Troopers to destroy it!"
 renwu:wdsov01s30: Sofia: "According to our intel, any tree here could be a Mirage Tank."
 renwu:wdsov01s31: Sofia: "Although we can't tell which tree is fake, we can force them to reveal themselves by using the radiation field from a deployed Desolator!"
-renwu:wdsov01s32: Hint: Even if soldiers are low on health, don't worry—campfires can slowly heal nearby infantry; also, standing near a campfire automatically saves the game.
+renwu:wdsov01s32: Hint: Even if soldiers are low on health, don't worry—campfires can slowly heal nearby infantry.
 renwu:wdsov01s33: Sofia: "There's a shortcut here; your eyesight is truly impressive, Comrade General!"
 renwu:wdsov01s34: Sofia: "Detected Grand Cannon, extremely dangerous!"
 renwu:wdsov01s35: Sofia: "Although this beast is powerful, we can have our spy infiltrate the power plant to silence it."
@@ -5557,3 +5568,34 @@ Description:TSUNAMI: 【Side】Erebus - Chaos Legion
   -Can fire on the move
   -Auto-repairs
   -Immune to gravity effects
+Name:GAWEAP: Allied War Factory
+Name:NAWEAP: Soviet War Factory
+Name:YAWEAP: Erebus War Factory
+TXT_HOUSE_NAME_AI: Computer Player
+Name:SaveGameSW: Save Game
+Description:SaveGameSW: 
+Theme:Banners Shroud the Sky: Banners Shroud the Sky - Soarcloud
+Theme:Beacons on Every Horizon: Beacons on Every Horizon - Soarcloud
+Theme:Lone City in Flames: Lone City in Flames - Soarcloud
+Theme:The Sacred War: The Sacred War - Soarcloud
+Name:PeaShooter: 豌豆射手
+Description:PeaShooter: 就只是一个豌豆射手
+Name:PeaShooter_SP: 双发射手
+Description:PeaShooter_SP: 就只是一个双发射手
+Name:PeaGatling: 机枪射手
+Description:PeaGatling: 就只是一个机枪射手
+Name:ASDEST: 突袭驱逐舰
+Description:ASDEST: 【所属】同盟国联军
+  【单位类型】重型两栖突击舰
+  【护甲】重甲
+  【武器】 
+    [155mm舰炮]
+    -伤害类型：穿甲(AP)
+    -反装甲、反建筑
+    [黑洞装甲]
+    -周围友方单位收到的伤害平分给范围内的所有友方单位
+  【特殊属性】
+  -两栖
+  -无法被劫持
+  -驾驶员无法被杀死
+  -可以移动攻击
